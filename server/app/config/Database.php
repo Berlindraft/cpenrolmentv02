@@ -1,9 +1,10 @@
 <?php
 
+namespace app\config;
+
 require __DIR__ . '/../../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
-$dotenv->load();
+use PDO;
 
 class Database {
     private static $instance = null;
@@ -14,6 +15,9 @@ class Database {
     private $password;
 
     public function __construct() {
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+        $dotenv->load();
+
         $this->host = $_ENV['DB_HOST'];
         $this->databaseName = $_ENV['DB_NAME'];
         $this->userName = $_ENV['DB_USER'];
@@ -27,7 +31,7 @@ class Database {
                 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
             );
             $this->conn->exec("set names utf8");
-        } catch (PDOException $exception) {
+        } catch (\PDOException $exception) {
             error_log("Database Connection Error: " . $exception->getMessage());
             die("Database connection failed. Contact administrator.");
         }
@@ -44,5 +48,3 @@ class Database {
         return $this->conn;
     }
 }
-
-?>

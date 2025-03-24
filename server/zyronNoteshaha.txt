@@ -1,0 +1,28 @@
+8 folders
+- /public/index.php - Entry point of the application
+
+- /app/api - Contains API endpoints and logic.
+- /app/config - Configuration files for the application.
+- /app/contracts - Interfaces and abstract classes for dependencies.
+- /app/controller - Handles incoming requests and responses.
+- /app/core -  Core framework files and application engine.
+- /app/model - Database models for data interaction.
+- /app/repository - Data access layer for managing database operations.
+- /app/service - Business logic and reusable functionality.
+
+- /vendor - Third-party dependencies managed by Composer.
+
+used
+/app/config/database.php
+/app/model/User.php
+/app/service/AuthService.php
+/app/controller/AuthController.php
+/app/api/auth.php
+
+not used
+/contracts
+/repository
+/core
+
+
+
