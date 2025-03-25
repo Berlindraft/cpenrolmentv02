@@ -36,20 +36,20 @@ Ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-$ git clone https://github.com/your-repository/school-enrollment-system.git
-$ cd school-enrollment-system
+$ git clone https://github.com/Berlindraft/cpenrolmentv02
+$ cd cpenrolmentv02
 ```
 
 ### 2. Install Frontend Dependencies
 ```bash
-$ cd frontend
+$ cd client
 $ npm install
 ```
 
 ### 3. Configure Backend
-1. Go to the `backend` folder:
+1. Go to the `server` folder:
    ```bash
-   $ cd ../backend
+   $ cd ../server
    ```
 2. Install dependencies (if applicable):
    ```bash
@@ -59,9 +59,9 @@ $ npm install
    ```env
    DB_HOST=localhost
    DB_PORT=5432
-   DB_DATABASE=school_enrollment
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
+   DB_DATABASE=cpenrolment1
+   DB_USERNAME=username
+   DB_PASSWORD=password
    ```
 4. Run database migrations:
    ```bash
@@ -72,13 +72,13 @@ $ npm install
 
 #### Frontend
 ```bash
-$ cd ../frontend
+$ cd ../client
 $ npm run dev
 ```
 
 #### Backend
 ```bash
-$ cd ../backend
+$ cd ../server
 $ php -S localhost:8000
 ```
 
@@ -91,22 +91,6 @@ $ php -S localhost:8000
 4. **PostgreSQL** - A robust relational database system.
 5. **PHP** - Backend logic and API integration.
 
-## Contribution Guidelines
-
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   $ git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   $ git commit -m "Add feature description"
-   ```
-4. Push to the branch:
-   ```bash
-   $ git push origin feature-name
-   ```
-5. Open a pull request.
 
 ## License
 
